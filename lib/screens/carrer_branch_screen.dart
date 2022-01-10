@@ -1,6 +1,7 @@
 import 'package:internui/models/career_countries_model.dart';
 import 'package:internui/screens/countries_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:internui/widgets/appbarwidget.dart';
 
 import '../constants.dart';
 
@@ -10,9 +11,12 @@ class CareerBranch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Choose your branch', style: kAppBarStyle)),
+        appBar: CustomAppBar(
+          title: 'Choose your Branch',
+          backgroundColor: Colors.purple,
+        ),
         body: ListView.builder(
-          // scrollDirection: Axis.horizontal,
+            // scrollDirection: Axis.horizontal,
             itemCount: career.length,
             itemBuilder: (context, index) {
               final data = career[index];

@@ -1,17 +1,19 @@
+import 'package:internui/widgets/appbarwidget.dart';
 import 'package:internui/widgets/best_colleges_widget.dart';
 import 'package:internui/widgets/best_company_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
 
-class CollegeScreen extends StatelessWidget {
-  const CollegeScreen({Key? key}) : super(key: key);
+class DetailScreen extends StatelessWidget {
+  const DetailScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Detail Page', style: kAppBarStyle),
+        appBar: CustomAppBar(
+          title: 'Detail screen',
+          backgroundColor: Colors.purple,
         ),
         body: ListView(
           children: [
