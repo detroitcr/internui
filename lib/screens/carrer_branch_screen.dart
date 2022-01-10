@@ -1,7 +1,8 @@
 import 'package:internui/models/career_countries_model.dart';
 import 'package:internui/screens/countries_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:internui/widgets/appbarwidget.dart';
+import 'package:internui/widgets/app_bar_widget.dart';
+import 'package:internui/widgets/text_widget.dart';
 
 import '../constants.dart';
 
@@ -16,7 +17,6 @@ class CareerBranch extends StatelessWidget {
           backgroundColor: Colors.purple,
         ),
         body: ListView.builder(
-            // scrollDirection: Axis.horizontal,
             itemCount: career.length,
             itemBuilder: (context, index) {
               final data = career[index];
@@ -28,7 +28,11 @@ class CareerBranch extends StatelessWidget {
                 },
                 leading: CircleAvatar(
                     child: Text(data.toString().toString().split(" ")[0][0])),
-                title: Text(data.name),
+                title: TextWidget(
+                  text: data.name,
+                  color: Colors.black,
+                  size: 16,
+                ),
                 subtitle: Text('Available Colleges: ' + data.coursecount),
               );
             }));

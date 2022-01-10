@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:internui/widgets/text_widget.dart';
 
 import '../constants.dart';
 
@@ -25,10 +26,10 @@ class OpacityContainer extends StatelessWidget {
           Colors.black.withOpacity(0.7),
         ], end: Alignment.bottomCenter, begin: Alignment.topCenter),
       ),
-      child: Text(
-        title,
-        // "Titans",
-        style: kCardTitle,
+      child: TextWidget(
+        text: title,
+        color: Colors.white,
+        size: 32,
       ),
       // color: Colors.black,
     );

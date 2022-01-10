@@ -1,14 +1,18 @@
 import 'package:internui/models/career_countries_model.dart';
-import 'package:internui/screens/colleges.dart';
+import 'package:internui/screens/colleges_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:internui/widgets/app_bar_widget.dart';
+import 'package:internui/widgets/text_widget.dart';
 import '../constants.dart';
 
 class CountriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-      AppBar(title: Text('Top Countries for Science', style: kAppBarStyle)),
+      appBar: CustomAppBar(
+        title: 'Select one Country ',
+        backgroundColor: Colors.purple,
+      ),
       body: Container(
         child: ListView.builder(
           itemCount: countries.length,
@@ -17,14 +21,15 @@ class CountriesScreen extends StatelessWidget {
             return ListTile(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return CollegeScreen();
+                  return DetailScreen();
                 }));
               },
               leading: CircleAvatar(
                   child: Text(data.toString().toString().split(" ")[0][0])),
-              title: Text(
-                data,
-                style: TextStyle(color: Colors.black, fontSize: 24),
+              title: TextWidget(
+                text: data,
+                color: Colors.black,
+                size: 16,
               ),
             );
           },

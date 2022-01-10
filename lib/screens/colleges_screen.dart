@@ -1,4 +1,4 @@
-import 'package:internui/widgets/appbarwidget.dart';
+import 'package:internui/widgets/app_bar_widget.dart';
 import 'package:internui/widgets/best_colleges_widget.dart';
 import 'package:internui/widgets/best_company_widget.dart';
 import 'package:flutter/material.dart';
