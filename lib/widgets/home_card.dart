@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:internui/widgets/image_widget.dart';
 import 'card_opacity_containerwidget.dart';
 
 class HomeCard extends StatelessWidget {
@@ -13,7 +14,7 @@ class HomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 14, left: 22, right: 20),
+      padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
       child: Container(
         child: GestureDetector(
           onTap: ontap,
@@ -27,12 +28,8 @@ class HomeCard extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    Image.asset(
-                      imageUrl,
-                      fit: BoxFit.cover,
-                      height: 170,
-                      width: 360,
-                    ),
+                    // getImageWidget(),
+                    getImageAsset(imageUrl, 170, 360),
                     OpacityContainer(title: title),
                   ],
                 ),

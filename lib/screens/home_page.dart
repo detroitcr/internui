@@ -6,8 +6,6 @@ import 'package:internui/widgets/app_bar_widget.dart';
 import 'package:internui/widgets/home_card.dart';
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -21,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
           appBar: CustomAppBar(
-            title: 'Education App',
+            text: 'Education App',
             backgroundColor: Colors.purple,
           ),
           body: ListView.builder(
@@ -35,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                     //   return CareerBranch();
                     // }));
 
-                    Get.to(CareerBranch());
+                    Get.to(() => CareerBranch());
                   },
                 );
               })),

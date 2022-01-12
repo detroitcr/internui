@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:internui/models/college_model.dart';
+import 'package:internui/widgets/image_widget.dart';
 import 'package:internui/widgets/text_widget.dart';
 
 class CardWidget extends StatelessWidget {
@@ -31,12 +31,13 @@ class CardWidget extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Image.asset(
-                image,
-                fit: BoxFit.cover,
-                height: 210,
-                width: 300,
-              ),
+              getImageAsset(image, 210, 300),
+              // Image.asset(
+              //   image,
+              //   fit: BoxFit.cover,
+              //   height: 210,
+              //   width: 300,
+              // ),
               Container(
                   padding: EdgeInsets.only(left: 15, bottom: 15),
                   alignment: Alignment.bottomLeft,

@@ -1,8 +1,9 @@
-import 'package:internui/constants.dart';
 import 'package:internui/models/college_model.dart';
 import 'package:flutter/material.dart';
+import 'package:internui/widgets/sized_box_widget.dart';
 
 import 'card_widget.dart';
+import 'mytext_widget.dart';
 
 class BestColleges extends StatelessWidget {
   const BestColleges({Key? key}) : super(key: key);
@@ -14,9 +15,12 @@ class BestColleges extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Best Colleges',
-            style: kCareerStyle,
+          MyText(
+            text: 'BestColleges',
+            fontColor: Colors.black,
+          ),
+          MySizedBox(
+            height: 0.01,
           ),
           Container(
               height: 270,

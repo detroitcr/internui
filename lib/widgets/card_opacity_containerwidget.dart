@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:internui/widgets/text_widget.dart';
 
-import '../constants.dart';
-
 class OpacityContainer extends StatelessWidget {
   const OpacityContainer({
     Key? key,

@@ -1,6 +1,7 @@
-import 'package:internui/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:internui/models/company_model.dart';
+import 'package:internui/widgets/mytext_widget.dart';
+import 'package:internui/widgets/sized_box_widget.dart';
 
 import 'card_widget.dart';
 
@@ -14,9 +15,12 @@ class BestCompany extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Best Company',
-            style: kCareerStyle,
+          MyText(
+            text: 'BestCompany',
+            fontColor: Colors.black,
+          ),
+          MySizedBox(
+            height: 0.01,
           ),
           Container(
               height: 270,
