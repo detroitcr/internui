@@ -18,25 +18,26 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          appBar: CustomAppBar(
-            text: 'Education App',
-            backgroundColor: Colors.purple,
-          ),
-          body: ListView.builder(
-              itemCount: homeData.length,
-              itemBuilder: (context, index) {
-                return HomeCard(
-                  title: homeData[index].title,
-                  imageUrl: homeData[index].imageUrl,
-                  ontap: () {
-                    // Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    //   return CareerBranch();
-                    // }));
+        appBar: CustomAppBar(
+          text: 'Education App',
+          backgroundColor: Colors.purple,
+        ),
+        body: ListView.builder(
+            itemCount: homeData.length,
+            itemBuilder: (context, index) {
+              return HomeCard(
+                title: homeData[index].title,
+                imageUrl: homeData[index].imageUrl,
+                ontap: () {
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  //   return CareerBranch();
+                  // }));
 
-                    Get.to(() => CareerBranch());
-                  },
-                );
-              })),
+                  Get.to(() => CareerBranch());
+                },
+              );
+            }),
+      ),
     );
   }
 }

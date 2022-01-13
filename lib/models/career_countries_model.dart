@@ -5,6 +5,12 @@ final List countries = [
   'Spain',
   'Italy',
   'India',
+  'Usa',
+  'Australia',
+  'China',
+  'Spain',
+  'Italy',
+  'India',
 ];
 
 class Career {

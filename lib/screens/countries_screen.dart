@@ -1,12 +1,12 @@
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:internui/models/career_countries_model.dart';
-import 'package:internui/screens/colleges_screen.dart';
+import 'package:internui/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:internui/widgets/list_tile_widget.dart';
 import 'package:internui/widgets/app_bar_widget.dart';
-import 'package:internui/widgets/mytext_widget.dart';
 import 'package:internui/widgets/text_widget.dart';
+
+import 'main_drawer_screen.dart';
 
 class CountriesScreen extends StatelessWidget {
   @override
@@ -16,21 +16,31 @@ class CountriesScreen extends StatelessWidget {
         text: 'Select one Country ',
         backgroundColor: Colors.purple,
       ),
-      body: Container(
-        child: ListView.builder(
+      drawer: MainDrawer(),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
+        child: GridView.builder(
           itemCount: countries.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 30,
+          ),
           itemBuilder: (context, index) {
-            final data = countries[index];
-            return MyListTile(
-              ontap: () {
-                Get.to(() => DetailScreen());
-              },
-              leading: CircleAvatar(
-                  child: Text(data.toString().toString().split(" ")[0][0])),
-              title: TextWidget(
-                text: data,
-                color: Colors.black,
-                size: 16,
+            return GestureDetector(
+              onTap: () => Get.to(() => DetailScreen()),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.blue),
+                // color: Colors.blue,
+                child: Center(
+                    child: TextWidget(
+                  text: countries[index],
+                  color: Colors.white,
+                  size: 3,
+                  fontWeight: FontWeight.w400,
+                )),
               ),
             );
           },

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:internui/widgets/mytext_widget.dart';
+import 'package:internui/widgets/text_widget.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String text;
@@ -20,10 +20,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: backgroundColor,
       centerTitle: true,
       elevation: 0,
-      title: MyText(
+      title: TextWidget(
         text: text.toString(),
         size: 6.0,
-        fontWeight: FontWeight.bold,
+        color: Colors.white,
+        fontWeight: FontWeight.w700,
       ),
     );
   }

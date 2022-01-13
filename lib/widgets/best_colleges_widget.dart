@@ -1,9 +1,8 @@
 import 'package:internui/models/college_model.dart';
 import 'package:flutter/material.dart';
-import 'package:internui/widgets/sized_box_widget.dart';
+import 'package:internui/widgets/text_widget.dart';
 
 import 'card_widget.dart';
-import 'mytext_widget.dart';
 
 class BestColleges extends StatelessWidget {
   const BestColleges({Key? key}) : super(key: key);
@@ -15,13 +14,14 @@ class BestColleges extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MyText(
+          TextWidget(
             text: 'BestColleges',
-            fontColor: Colors.black,
+            color: Colors.black,
+            size: 4,
           ),
-          MySizedBox(
-            height: 0.01,
-          ),
+          // MySizedBox(
+          //   height: 0.01,
+          // ),
           Container(
               height: 270,
               child: ListView.builder(
@@ -31,15 +31,11 @@ class BestColleges extends StatelessWidget {
                     final data = collegeData[index];
                     return GestureDetector(
                       onTap: () {},
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        child: CardWidget(
-                          image: data.image,
-                          cost: data.cost,
-                          location: data.location,
-                          name: data.name,
-                        ),
+                      child: CardWidget(
+                        image: data.image,
+                        cost: data.cost,
+                        location: data.location,
+                        name: data.name,
                       ),
                     );
                   }))
