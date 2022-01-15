@@ -15,15 +15,15 @@ final List countries = [
 
 class Career {
   final String name;
-  final String coursecount;
+  final String courseCount;
 
-  Career({required this.name, required this.coursecount});
+  Career({required this.name, required this.courseCount});
 }
 
 List<Career> career = [
-  Career(coursecount: '12', name: 'Computer Science'),
-  Career(coursecount: '22', name: 'IT'),
-  Career(coursecount: '14', name: 'Biology'),
-  Career(coursecount: '5', name: 'Physics'),
-  Career(coursecount: '8', name: 'Architecture'),
+  Career(courseCount: '12', name: 'Computer Science'),
+  Career(courseCount: '22', name: 'IT'),
+  Career(courseCount: '14', name: 'Biology'),
+  Career(courseCount: '5', name: 'Physics'),
+  Career(courseCount: '8', name: 'Architecture'),
 ];

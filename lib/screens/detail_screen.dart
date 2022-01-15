@@ -15,34 +15,37 @@ class DetailScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.purple,
           centerTitle: true,
-          title: TextWidget(
+          title: const TextWidget(
             text: 'Detail Screen',
             color: Colors.white,
             fontWeight: FontWeight.w700,
             size: 6,
           ),
           bottom: const TabBar(
+            indicatorColor: Colors.purple,
             physics: BouncingScrollPhysics(
               parent: AlwaysScrollableScrollPhysics(),
             ),
-            isScrollable: true,
+            // isScrollable: true,
             tabs: [
               Tab(
                 child: TextWidget(
                   text: "Best Colleges",
                   color: Colors.white,
+                  size: 2,
                 ),
               ),
               Tab(
                 child: TextWidget(
-                  text: "Best Comapny",
+                  text: "Best Company",
                   color: Colors.white,
+                  size: 2,
                 ),
               ),
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             BestColleges(),
             BestCompany(),

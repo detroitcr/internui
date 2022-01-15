@@ -18,7 +18,7 @@ List<CollegeModel> collegeData = [
   CollegeModel(
     name: 'MIT',
     image: 'assets/images/college.jpg',
-    cost: '\$800',
+    cost: '\$ 800',
     location: 'Cambridge',
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -26,7 +26,7 @@ List<CollegeModel> collegeData = [
   CollegeModel(
     name: 'HARVARD',
     image: 'assets/images/college.jpg',
-    cost: '\$900',
+    cost: '\$ 900',
     location: 'Cambridge',
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -34,7 +34,7 @@ List<CollegeModel> collegeData = [
   CollegeModel(
     name: 'CALTECH',
     image: 'assets/images/college.jpg',
-    cost: '\$700',
+    cost: '\$ 700',
     location: 'Pasadenia',
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',

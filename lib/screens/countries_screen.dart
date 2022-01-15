@@ -14,17 +14,17 @@ class CountriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         text: 'Select one Country ',
-        backgroundColor: Colors.purple,
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       drawer: MainDrawer(),
       body: Padding(
-        padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
         child: GridView.builder(
           itemCount: countries.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
             crossAxisSpacing: 10,
-            mainAxisSpacing: 30,
+            mainAxisSpacing: 24,
           ),
           itemBuilder: (context, index) {
             return GestureDetector(

@@ -26,40 +26,41 @@ class MainDrawer extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          // Padding(
-          //   padding: const EdgeInsets.only(top: 10, left: 20),
-          //   child: TextWidget(
-          //     text: 'Branches',
-          //     color: Colors.black,
-          //     size: 24,
-          //   ),
-          // ),
           MyListTile(
             ontap: () {
               Navigator.of(context).pop();
               Get.to(() => CareerBranch());
             },
-            leading: Icon(Icons.local_library_outlined),
-            title: TextWidget(
+            leading: Icon(
+              Icons.local_library_outlined,
+              color: Theme.of(context).primaryColor,
+            ),
+            title: const TextWidget(
               text: 'Science',
               color: Colors.black,
-              size: 3,
+              size: 4,
             ),
           ),
           MyListTile(
-            leading: Icon(Icons.local_library_outlined),
-            title: TextWidget(
+            leading: Icon(
+              Icons.local_library_outlined,
+              color: Theme.of(context).primaryColor,
+            ),
+            title: const TextWidget(
               text: 'Arts',
               color: Colors.black,
-              size: 3,
+              size: 4,
             ),
           ),
           MyListTile(
-            leading: Icon(Icons.local_library_outlined),
-            title: TextWidget(
+            leading: Icon(
+              Icons.local_library_outlined,
+              color: Theme.of(context).primaryColor,
+            ),
+            title: const TextWidget(
               text: 'Commerce',
               color: Colors.black,
-              size: 3,
+              size: 4,
             ),
           ),
         ],

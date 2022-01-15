@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:internui/models/company_model.dart';
+import 'package:internui/screens/expandable_list_tile.dart';
 import 'package:internui/widgets/text_widget.dart';
 
 class BestCompany extends StatelessWidget {
@@ -9,13 +10,14 @@ class BestCompany extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.only(top: 15, right: 10, left: 10),
+      padding: const EdgeInsets.only(top: 20, right: 10, left: 10),
       child: ListView.builder(
           // scrollDirection: Axis.horizontal,
-          itemCount: companyModels.length,
+          itemCount: companyData.length,
           itemBuilder: (context, index) {
-            final data = companyModels[index];
+            final data = companyData[index];
             return Card(
+              elevation: 4,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
@@ -25,49 +27,11 @@ class BestCompany extends StatelessWidget {
                       height: 200,
                       fit: BoxFit.cover,
                     ),
-                    ExpansionTile(
-                      childrenPadding: EdgeInsets.all(14),
-                      title: TextWidget(
-                        text: data.name,
-                        size: 4,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            TextWidget(
-                              text: 'Average Salary: ',
-                              color: Colors.black,
-                              size: 4,
-                            ),
-                            TextWidget(
-                              text: data.cost,
-                              color: Colors.black54,
-                              size: 4,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            TextWidget(
-                              text: 'Location: ',
-                              color: Colors.black,
-                              size: 4,
-                            ),
-                            TextWidget(
-                              text: data.location,
-                              color: Colors.black54,
-                              size: 4,
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
+                    CustomExpandableTile(
+                        name: data.name,
+                        cost: data.cost,
+                        location: data.location,
+                        costTitle: 'Average Salary: ')
                   ],
                 ),
               ),

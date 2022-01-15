@@ -12,11 +12,11 @@ class CareerBranch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomAppBar(
+        appBar: const CustomAppBar(
           text: 'Choose your Branch',
           backgroundColor: Colors.purple,
         ),
-        drawer: MainDrawer(),
+        drawer: const MainDrawer(),
         body: ListView.builder(
             itemCount: career.length,
             itemBuilder: (context, index) {
@@ -33,7 +33,7 @@ class CareerBranch extends StatelessWidget {
                   size: 3,
                 ),
                 subtitle: TextWidget(
-                  text: 'Available Colleges:' + data.coursecount,
+                  text: 'Available Colleges:' + data.courseCount,
                   color: Colors.black87,
                   size: 0,
                 ),

@@ -14,10 +14,10 @@ class CompanyModel {
   });
 }
 
-List<CompanyModel> companyModels = [
+List<CompanyModel> companyData = [
   CompanyModel(
     name: 'GOOGLE',
-    cost: '\$4500',
+    cost: '\$ 4500',
     image: 'assets/images/google.jpg',
     location: 'California',
     description:
@@ -25,7 +25,7 @@ List<CompanyModel> companyModels = [
   ),
   CompanyModel(
     name: 'AMAZON',
-    cost: '\$5000',
+    cost: '\$ 5000',
     image: 'assets/images/amazon.jpg',
     location: 'San Francisco',
     description:
@@ -33,7 +33,7 @@ List<CompanyModel> companyModels = [
   ),
   CompanyModel(
     name: 'FACEBOOK',
-    cost: '\$5000',
+    cost: '\$ 5000',
     image: 'assets/images/fb.jpg',
     location: 'San Francisco',
     description:
